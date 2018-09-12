@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
-using System.Diagnostics;
+using UnityEngine.UI;
 
 public class Level1 : MonoBehaviour {
 
-    private int HighScore;
-    private float enemyDamage = 1;
-    private float goldMultiply = 1;
-    private float scoreMultiply = 1;
-    int time;
-    int nextTime;
-    private int enemyPick;
+    //Record de valores
+    private static float HighScore;
+    public static int eneCount;
+    
+    private int _enemyPick;
 
     public GameObject en1, en2, en3;
     
@@ -18,23 +16,30 @@ public class Level1 : MonoBehaviour {
 
     private void Start()
     {
+        gameManager.setMultiply(Levels.One);
         Picker();
         NextEnemySpawnTime = (int)Time.time + EnemySpawnRate;
     }
 
     void Update()
     {
+        
         if((int)Time.time == NextEnemySpawnTime){
  
             Picker();
             NextEnemySpawnTime = (int)Time.time + EnemySpawnRate;
         }
+
+        if (eneCount == 15)
+        {
+            gameManager.Finish();
+        }
     }
 
     private void Picker() {
-        enemyPick = UnityEngine.Random.Range(0, 3);
+        _enemyPick = UnityEngine.Random.Range(0, 3);
 
-        switch (enemyPick) {
+        switch (_enemyPick) {
             case 0:
                 spawnEnemy(en1);
                 break;
@@ -61,7 +66,7 @@ public class Level1 : MonoBehaviour {
 
     public void nextEnemy()
     {
-        nextTime = UnityEngine.Random.Range(1000, time);
+        int nextTime = UnityEngine.Random.Range(1000, 0);
     }
 
 
