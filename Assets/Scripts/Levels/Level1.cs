@@ -6,6 +6,7 @@ public class Level1 : MonoBehaviour {
     //Record de valores
     private static float HighScore;
     public static int eneCount;
+    public bool finish;
     
     private int _enemyPick;
 
@@ -32,7 +33,7 @@ public class Level1 : MonoBehaviour {
 
         if (eneCount >= 10)
         {
-            gameManager.Finish();
+            gameManager.lvlPass = true;
         }
     }
 

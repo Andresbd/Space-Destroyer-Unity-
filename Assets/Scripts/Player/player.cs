@@ -26,7 +26,7 @@ public class player : MonoBehaviour
 
             if (charHealth <= 0)
             {
-                gameManager.EndGame();
+	            gameManager.pDead = true;
                 Destroy(gameObject);
             }
         }

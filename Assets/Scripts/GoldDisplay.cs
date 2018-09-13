@@ -11,6 +11,6 @@ public class GoldDisplay : MonoBehaviour {
 	private void Start()
 	{
 		goldNumber = player.gold;
-		goldText.text = "Oro: " + goldNumber;
+		goldText.text = "oro: " + goldNumber;
 	}
 }

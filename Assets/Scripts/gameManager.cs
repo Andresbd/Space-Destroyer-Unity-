@@ -2,44 +2,61 @@
 using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 enum Levels {One, Two, Three};
 
 public class gameManager : MonoBehaviour {
 
     public static int scoreMultiply;
-    public saveData saveData;
+    private saveData saveData;
     public static GameObject inGame;
-    private static string saveName = "save.json";
+    private string saveName = "save.json";
+    public static Enum Level { get; set; }
+    public static gameManager GM;
 
-	void Awake () {
+    public static bool pDead = false, lvlPass = false;
 
-        DontDestroyOnLoad(gameObject);
+    private 
+
+	void Start () {
+
+        if (GM == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            GM = this;
+        }else if (GM != this)
+        {
+            Destroy(gameObject);
+        }
+        
 	    LoadGameData();
 	}
 
-    public static void Finish()
+    private void Update()
     {
-        saveData save = new saveData();
-        string saveState = Path.Combine(Application.persistentDataPath, "save.json");
-        File.WriteAllText(saveState, JsonUtility.ToJson(save, true));
-        SceneManager.LoadScene("LevelSelect");
-        
-        player.charHealth = 6;
-        player.charShield = 0 + Upgrade.mSH;
-        Level1.eneCount = 0;
+        if (pDead)
+        {
+            EndGame();
+            pDead = false;
+        }
+
+        if (lvlPass)
+        {
+            EndGame();
+            lvlPass = false;
+        }
     }
 
     public static void setMultiply(Enum e)
     {
         if (e.Equals(Levels.One))
         {
+            Level = e;
             scoreMultiply = Multiplicador.one;
         }
     }
 
-    public static void EndGame()
+    public void EndGame()
     {
         SaveProgress();
         
@@ -47,33 +64,46 @@ public class gameManager : MonoBehaviour {
         
         player.charHealth = 6;
         player.charShield = 0 + Upgrade.mSH;
+        
+        resetEnemies();
+        
+    }
+
+    private static void resetEnemies()
+    {
         Level1.eneCount = 0;
     }
 
-    private static void SaveProgress()
+    public static void addKill()
     {
-        saveData save = new saveData();
-        
-        string saveState = Path.Combine(Application.persistentDataPath, saveName);
-
-        if (File.Exists(saveState))
+        if (Level.Equals(Levels.One))
         {
-            string dataJson = File.ReadAllText(saveState);
-        }
-        else
-        {
-            File.WriteAllText(saveState, JsonUtility.ToJson(save, true));   
+            Level1.eneCount += 1;
         }
     }
 
-    private static void LoadGameData()
+    private void SaveProgress()
     {
+        string dataJson = JsonUtility.ToJson(saveData);
         string saveState = Path.Combine(Application.persistentDataPath, saveName);
+
+        File.WriteAllText(saveState, dataJson);
+    }
+
+    private void LoadGameData()
+    {
+        string filePath = Path.Combine(Application.persistentDataPath, saveName);
         
-        if (File.Exists(saveState))
+        if (File.Exists(filePath))
         {
-            string dataJson = File.ReadAllText(saveState);
+            string dataJson = File.ReadAllText(filePath);
+            
             saveData loadData = JsonUtility.FromJson<saveData>(dataJson);
+
+            player.gold = loadData.gold;
+            player.experience = loadData.exp;
+            Upgrade.mAT = loadData.Attack;
+            Upgrade.mSH = loadData.Shield;
         }
         else
         {

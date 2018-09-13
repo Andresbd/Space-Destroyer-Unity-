@@ -33,7 +33,7 @@ public class enemy : MonoBehaviour {
 
 		if (Health <= 0) {
 
-			Level1.eneCount += 1;
+			gameManager.addKill();
 			player.gold = player.gold + goldValue;
 			Destroy (gameObject);
 		}
