@@ -8,7 +8,7 @@ enum Levels {One, Two, Three};
 
 public class gameManager : MonoBehaviour {
 
-    public static float scoreMultiply;
+    public static int scoreMultiply;
     public saveData saveData;
     public static GameObject inGame;
 
@@ -24,13 +24,16 @@ public class gameManager : MonoBehaviour {
         string saveState = Path.Combine(Application.persistentDataPath, "save.json");
         File.WriteAllText(saveState, JsonUtility.ToJson(save, true));
         SceneManager.LoadScene("LevelSelect");
+        
+        player.charHealth = 6;
+        player.charShield = 0 + Upgrade.mSH;
+        Level1.eneCount = 0;
     }
 
     public static void setMultiply(Enum e)
     {
         if (e.Equals(Levels.One))
         {
-            Debug.Log("Nivel1");
             scoreMultiply = Multiplicador.one;
         }
     }
@@ -43,6 +46,10 @@ public class gameManager : MonoBehaviour {
         File.WriteAllText(saveState, JsonUtility.ToJson(save, true));
         
         SceneManager.LoadScene("LevelSelect");
+        
+        player.charHealth = 6;
+        player.charShield = 0 + Upgrade.mSH;
+        Level1.eneCount = 0;
     }
     
     private void LoadGameData()

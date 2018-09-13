@@ -12,7 +12,7 @@ public class enemy : MonoBehaviour {
 		if(col.tag == "Bullet")
 		{
 			Damage ();
-			UIManager.moreScore(scoreValue);
+			UIManager.moreScore(scoreValue * gameManager.scoreMultiply);
 		}
 
 		if(col.tag == "Player")
@@ -23,7 +23,7 @@ public class enemy : MonoBehaviour {
 
 	void Damage () {
 
-		Health = Health - bullet.damage;
+		Health -= bullet.damage;
 
 		if (Health == 0) {
 

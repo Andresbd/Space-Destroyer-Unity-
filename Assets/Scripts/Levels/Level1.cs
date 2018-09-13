@@ -30,7 +30,7 @@ public class Level1 : MonoBehaviour {
             NextEnemySpawnTime = (int)Time.time + EnemySpawnRate;
         }
 
-        if (eneCount == 15)
+        if (eneCount >= 10)
         {
             gameManager.Finish();
         }

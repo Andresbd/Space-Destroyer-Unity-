@@ -5,7 +5,7 @@ using UnityEngine;
 public static class Multiplicador
 {
 
-    public static float one = 1;
-    public static float two = 1.2f;
-    public static float three = 1.5f;
+    public static int one = 1;
+    public static int two = 2;
+    public static int three = 3;
 }

@@ -5,14 +5,8 @@ public class player : MonoBehaviour
 
 	public static int charHealth = 6;
     public static float charShield = 0;
-    public static float charEnergy = 0;
 	public static int gold;
 	public static int experience;
-
-	private void Start()
-	{
-		
-	}
 
 	void OnTriggerEnter2D(Collider2D col)
 	{

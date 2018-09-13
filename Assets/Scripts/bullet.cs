@@ -4,7 +4,12 @@ public class bullet : MonoBehaviour {
 
 	public float speed = 5;
 	public static int damage = 1;
-	
+
+	private void Start()
+	{
+		damage = damage + Upgrade.mAT;
+	}
+
 	// Update is called once per frame
 	void Update () {
 
