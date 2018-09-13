@@ -9,20 +9,20 @@ public static class Upgrade
 
     public static void moreSH()
     {
-        mSH = mSH + 1;
+        mSH += 1;
         cSH = cSH * 2;
     }
 
     public static void moreEN()
     {
-        mEN = mEN + 1;
+        mEN += 1;
         cEN = cEN * 2;
     }
 
     public static void moreAT()
     {
-        mAT = mAT + 1;
-        cAT = cAT * cAT;
+        mAT += 1;
+        cAT = cAT * 2;
     }
 
 }

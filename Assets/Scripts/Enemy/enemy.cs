@@ -5,6 +5,12 @@ public class enemy : MonoBehaviour {
 	private int scoreValue = 5;
 	private int goldValue = 1;
 	private int Health = 5;
+	private int ht;
+	
+	private void Start()
+	{
+		ht = bullet.damage + Upgrade.mAT;
+	}
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
@@ -22,10 +28,10 @@ public class enemy : MonoBehaviour {
 	}
 
 	void Damage () {
+		
+		Health -= ht;
 
-		Health -= bullet.damage;
-
-		if (Health == 0) {
+		if (Health <= 0) {
 
 			Level1.eneCount += 1;
 			player.gold = player.gold + goldValue;
