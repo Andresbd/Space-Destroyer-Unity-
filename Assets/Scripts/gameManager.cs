@@ -11,6 +11,7 @@ public class gameManager : MonoBehaviour {
     public static int scoreMultiply;
     public saveData saveData;
     public static GameObject inGame;
+    private static string saveName = "save.json";
 
 	void Awake () {
 
@@ -40,10 +41,7 @@ public class gameManager : MonoBehaviour {
 
     public static void EndGame()
     {
-        saveData save = new saveData();
-        
-        string saveState = Path.Combine(Application.persistentDataPath, "save.json");
-        File.WriteAllText(saveState, JsonUtility.ToJson(save, true));
+        SaveProgress();
         
         SceneManager.LoadScene("LevelSelect");
         
@@ -51,21 +49,35 @@ public class gameManager : MonoBehaviour {
         player.charShield = 0 + Upgrade.mSH;
         Level1.eneCount = 0;
     }
-    
-    private void LoadGameData()
-    {
-        string filePath = Path.Combine(Application.persistentDataPath, "save.json");
 
-        if(File.Exists(filePath))
+    private static void SaveProgress()
+    {
+        saveData save = new saveData();
+        
+        string saveState = Path.Combine(Application.persistentDataPath, saveName);
+
+        if (File.Exists(saveState))
         {
-            // Read the json from the file into a string
-            string dataAsJson = File.ReadAllText(filePath); 
-            // Pass the json to JsonUtility, and tell it to create a GameData object from it
-            saveData loadedData = JsonUtility.FromJson<saveData>(dataAsJson);
+            string dataJson = File.ReadAllText(saveState);
         }
         else
         {
-            Debug.LogError("Cannot load game data!");
+            File.WriteAllText(saveState, JsonUtility.ToJson(save, true));   
+        }
+    }
+
+    private static void LoadGameData()
+    {
+        string saveState = Path.Combine(Application.persistentDataPath, saveName);
+        
+        if (File.Exists(saveState))
+        {
+            string dataJson = File.ReadAllText(saveState);
+            saveData loadData = JsonUtility.FromJson<saveData>(dataJson);
+        }
+        else
+        {
+           Debug.LogError("No Save File");   
         }
     }
 }
