@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets/Scripts" t="Include">
+        <e p="bullet.cs" t="Include" />
+        <e p="changeScenes.cs" t="Include" />
+        <e p="Enemy" t="Include">
+          <e p="enemy.cs" t="Include" />
+          <e p="enemyMovement.cs" t="Include" />
+          <e p="enemySpawn.cs" t="Include" />
+        </e>
+        <e p="gameManager.cs" t="Include" />
+        <e p="Levels" t="Include">
+          <e p="Level1.cs" t="Include" />
+        </e>
+        <e p="MenuOptions.cs" t="Include" />
+        <e p="MenuUpgrade.cs" t="Include" />
+        <e p="meteorMovement.cs" t="Include" />
+        <e p="meteorSpawn.cs" t="Include" />
+        <e p="Player" t="Include">
+          <e p="Multiplicador.cs" t="Include" />
+          <e p="player.cs" t="Include" />
+          <e p="playerMovement.cs" t="Include" />
+          <e p="shooting.cs" t="Include" />
+        </e>
+        <e p="saveData.cs" t="Include" />
+        <e p="skyboxManager.cs" t="Include" />
+        <e p="UIManager.cs" t="Include" />
+        <e p="Upgrade.cs" t="Include" />
+      </e>
+      <e p="Assets/Standard Assets" t="Include">
+        <e p="CrossPlatformInput" t="Include">
+          <e p="CrossPlatformInputGuidelines.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="AxisTouchButton.cs" t="Include" />
+            <e p="ButtonHandler.cs" t="Include" />
+            <e p="CrossPlatformInputManager.cs" t="Include" />
+            <e p="InputAxisScrollbar.cs" t="Include" />
+            <e p="Joystick.cs" t="Include" />
+            <e p="MobileControlRig.cs" t="Include" />
+            <e p="PlatformSpecific" t="Include">
+              <e p="MobileInput.cs" t="Include" />
+              <e p="StandaloneInput.cs" t="Include" />
+            </e>
+            <e p="TiltInput.cs" t="Include" />
+            <e p="TouchPad.cs" t="Include" />
+            <e p="VirtualInput.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Editor" t="Include">
+          <e p="CrossPlatformInput" t="Include">
+            <e p="CrossPlatformInputInitialize.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Fonts" t="Include">
+          <e p="OpenSans" t="Include">
+            <e p="License!.txt" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Assets/TextMesh Pro" t="Include">
+        <e p="Examples &amp; Extras" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="Anton OFL.txt" t="Include" />
+            <e p="Bangers - OFL.txt" t="Include" />
+            <e p="LiberationSans - OFL.txt" t="Include" />
+            <e p="NotoSans - License.txt" t="Include" />
+            <e p="Oswald Bold - OFL.txt" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Benchmark01.cs" t="Include" />
+            <e p="Benchmark01_UGUI.cs" t="Include" />
+            <e p="Benchmark02.cs" t="Include" />
+            <e p="Benchmark03.cs" t="Include" />
+            <e p="Benchmark04.cs" t="Include" />
+            <e p="CameraController.cs" t="Include" />
+            <e p="ChatController.cs" t="Include" />
+            <e p="EnvMapAnimator.cs" t="Include" />
+            <e p="ObjectSpin.cs" t="Include" />
+            <e p="ShaderPropAnimator.cs" t="Include" />
+            <e p="SimpleScript.cs" t="Include" />
+            <e p="SkewTextExample.cs" t="Include" />
+            <e p="TeleType.cs" t="Include" />
+            <e p="TextConsoleSimulator.cs" t="Include" />
+            <e p="TextMeshProFloatingText.cs" t="Include" />
+            <e p="TextMeshSpawner.cs" t="Include" />
+            <e p="TMP_DigitValidator.cs" t="Include" />
+            <e p="TMP_ExampleScript_01.cs" t="Include" />
+            <e p="TMP_FrameRateCounter.cs" t="Include" />
+            <e p="TMP_TextEventCheck.cs" t="Include" />
+            <e p="TMP_TextEventHandler.cs" t="Include" />
+            <e p="TMP_TextInfoDebugTool.cs" t="Include" />
+            <e p="TMP_TextSelector_A.cs" t="Include" />
+            <e p="TMP_TextSelector_B.cs" t="Include" />
+            <e p="TMP_UiFrameRateCounter.cs" t="Include" />
+            <e p="TMPro_InstructionOverlay.cs" t="Include" />
+            <e p="VertexColorCycler.cs" t="Include" />
+            <e p="VertexJitter.cs" t="Include" />
+            <e p="VertexShakeA.cs" t="Include" />
+            <e p="VertexShakeB.cs" t="Include" />
+            <e p="VertexZoom.cs" t="Include" />
+            <e p="WarpTextExample.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Resources" t="Include">
+          <e p="LineBreaking Following Characters.txt" t="Include" />
+          <e p="LineBreaking Leading Characters.txt" t="Include" />
+          <e p="Shaders" t="Include">
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_SDF.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Assets/Virtual Joystick Pack" t="Include">
+        <e p="Example" t="Include">
+          <e p="PlayerExample.cs" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Base" t="Include">
+            <e p="Joystick.cs" t="Include" />
+          </e>
+          <e p="Joysticks" t="Include">
+            <e p="FixedJoystick.cs" t="Include" />
+            <e p="FloatingJoystick.cs" t="Include" />
+            <e p="VariableJoystick.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Space-Tactics.sln" t="IncludeFlat" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2018.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.2/resharper-host/local/Transient/ReSharperHost/v182/SolutionCaches/_Space-Tactics.-1231811210.00" t="ExcludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
+  </component>
+</project>

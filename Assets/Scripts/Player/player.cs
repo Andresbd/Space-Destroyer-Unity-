@@ -1,16 +1,18 @@
 ﻿using UnityEngine;
 
-public class player : MonoBehaviour {
-	
-	public static int charHealth;
-	
-    public static float charShield;
-    public static float charEnergy;
+public class player : MonoBehaviour
+{
+
+	public static int charHealth = 6;
+    public static float charShield = 0;
+    public static float charEnergy = 0;
 	public static int gold;
 	public static int experience;
-	
-	
-	public GameObject six, five, four, three, two, one;
+
+	private void Start()
+	{
+		
+	}
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
@@ -44,58 +46,58 @@ public class player : MonoBehaviour {
 	{
 		switch (hp)
 		{
-			case 12:
-				six.SetActive(true);
-				five.SetActive(true);
-				four.SetActive(true);
-				three.SetActive(true);
-				two.SetActive(true);
-				one.SetActive(true);
+			case 6:
+				UIManager.six.SetActive(true);
+				UIManager.five.SetActive(true);
+				UIManager.four.SetActive(true);
+				UIManager.three.SetActive(true);
+				UIManager.two.SetActive(true);
+				UIManager.one.SetActive(true);
 				break;
                 
-			case 10:
-				six.SetActive(false);
-				five.SetActive(true);
-				four.SetActive(true);
-				three.SetActive(true);
-				two.SetActive(true);
-				one.SetActive(true);    
-				break;
-			
-			case 8:
-				six.SetActive(false);
-				five.SetActive(false);
-				four.SetActive(true);
-				three.SetActive(true);
-				two.SetActive(true);
-				one.SetActive(true);    
-				break;
-			
-			case 6:
-				six.SetActive(false);
-				five.SetActive(false);
-				four.SetActive(false);
-				three.SetActive(true);
-				two.SetActive(true);
-				one.SetActive(true);    
+			case 5:
+				UIManager.six.SetActive(false);
+				UIManager.five.SetActive(true);
+				UIManager.four.SetActive(true);
+				UIManager.three.SetActive(true);
+				UIManager.two.SetActive(true);
+				UIManager.one.SetActive(true);    
 				break;
 			
 			case 4:
-				six.SetActive(false);
-				five.SetActive(false);
-				four.SetActive(false);
-				three.SetActive(false);
-				two.SetActive(true);
-				one.SetActive(true);    
+				UIManager.six.SetActive(false);
+				UIManager.five.SetActive(false);
+				UIManager.four.SetActive(true);
+				UIManager.three.SetActive(true);
+				UIManager.two.SetActive(true);
+				UIManager.one.SetActive(true);    
+				break;
+			
+			case 3:
+				UIManager.six.SetActive(false);
+				UIManager.five.SetActive(false);
+				UIManager.four.SetActive(false);
+				UIManager.three.SetActive(true);
+				UIManager.two.SetActive(true);
+				UIManager.one.SetActive(true);    
 				break;
 			
 			case 2:
-				six.SetActive(false);
-				five.SetActive(false);
-				four.SetActive(false);
-				three.SetActive(false);
-				two.SetActive(false);
-				one.SetActive(true);    
+				UIManager.six.SetActive(false);
+				UIManager.five.SetActive(false);
+				UIManager.four.SetActive(false);
+				UIManager.three.SetActive(false);
+				UIManager.two.SetActive(true);
+				UIManager.one.SetActive(true);    
+				break;
+			
+			case 1:
+				UIManager.six.SetActive(false);
+				UIManager.five.SetActive(false);
+				UIManager.four.SetActive(false);
+				UIManager.three.SetActive(false);
+				UIManager.two.SetActive(false);
+				UIManager.one.SetActive(true);    
 				break;
 		}
 	}

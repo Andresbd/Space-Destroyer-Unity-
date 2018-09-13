@@ -23,7 +23,7 @@ public class enemy : MonoBehaviour {
 
 	void Damage () {
 
-		Health -= 1;
+		Health = Health - bullet.damage;
 
 		if (Health == 0) {
 

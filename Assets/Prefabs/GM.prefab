@@ -51,7 +51,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4102355a0f8582e468547212753aebea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
-  scoreNumber: 0
-  gold: 0
-  experience: 0
+  player: {fileID: 1976970372067002, guid: 1ccd298c9629c4c08b713b268ea9e217, type: 2}
+  ui: {fileID: 1098972220701266, guid: 4805ff739e9381947995efd9ffbdf10b, type: 2}
