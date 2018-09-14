@@ -2,7 +2,7 @@
 
 public class bullet : MonoBehaviour {
 
-	public float speed = 5;
+	private float speed = 5;
 	public static int damage = 1;
 
 	// Update is called once per frame

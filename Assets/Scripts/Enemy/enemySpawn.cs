@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class enemySpawn : MonoBehaviour {
 
-	public float spawnTime = 5f;
+	public float spawnTime = 6f;
 
 	// Use this for initialization
 	void Start () {
@@ -14,8 +14,8 @@ public class enemySpawn : MonoBehaviour {
 
 	public void spawnEnemy(GameObject enemy) {
 
-		Vector2 bottom = new Vector2 (10f, -4.3f);
-		Vector2 top = new Vector2 (10f, 4.3f);
+		Vector2 bottom = new Vector2 (10f, -3.3f);
+		Vector2 top = new Vector2 (10f, 3.3f);
 
 		GameObject oneEnemy = (GameObject)Instantiate (enemy);
 		oneEnemy.transform.position = new Vector2(top.x, Random.Range(top.y, bottom.y));
