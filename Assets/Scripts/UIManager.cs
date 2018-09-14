@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour {
 	
 	public Text scoreText;
-	private static float scoreNumber;
+	public static float scoreNumber;
 	public static GameObject six, five, four, three, two, one;
 
 

@@ -4,7 +4,7 @@ public class player : MonoBehaviour
 {
 
 	public static int charHealth = 6;
-    public static float charShield = 0;
+    public static float charShield = 0 + Upgrade.mSH;
 	public static int gold;
 	public static int experience;
 

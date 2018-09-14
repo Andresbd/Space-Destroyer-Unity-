@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Level1 : MonoBehaviour {
 
     //Record de valores
-    private static float HighScore;
+    public static float HighScore;
     public static int eneCount;
     public bool finish;
     
@@ -31,10 +31,33 @@ public class Level1 : MonoBehaviour {
             NextEnemySpawnTime = (int)Time.time + EnemySpawnRate;
         }
 
-        if (eneCount >= 10)
+        if (eneCount >= 15)
         {
-            gameManager.lvlPass = true;
+            FinishLevel();
         }
+    }
+
+    private void FinishLevel()
+    {    
+        float tmp;
+        tmp = UIManager.scoreNumber;
+
+        if (HighScore == 0)
+        {
+            HighScore = tmp;
+            UIManager.scoreNumber = 0;
+            
+        }else if (tmp > HighScore)
+        {
+            HighScore = tmp;
+            UIManager.scoreNumber = 0;
+        }
+        else
+        {
+            UIManager.scoreNumber = 0;
+        }
+
+        gameManager.lvlPass = true;
     }
 
     private void Picker() {

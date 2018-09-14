@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class MenuOptions : MonoBehaviour {
+public class MenuOptions : MonoBehaviour
+{
+
+	public Sprite block, noStar, oneStar, twoStar, threeStar;
 
 	public void levelSelect()
 	{
@@ -20,4 +20,6 @@ public class MenuOptions : MonoBehaviour {
 	{
 		SceneManager.LoadScene("Level1");
 	}
+	
+	
 }

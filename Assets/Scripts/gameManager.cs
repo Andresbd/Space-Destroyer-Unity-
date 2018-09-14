@@ -80,11 +80,28 @@ public class gameManager : MonoBehaviour {
         {
             Level1.eneCount += 1;
         }
+        
+        if (Level.Equals(Levels.Two))
+        {
+            
+        }
+        
+        if (Level.Equals(Levels.Three))
+        {
+            
+        }
     }
 
     private void SaveProgress()
     {
-        string dataJson = JsonUtility.ToJson(saveData);
+        saveData sD = new saveData();
+
+        sD.gold = player.gold;
+        sD.Attack = Upgrade.mAT;
+        sD.Shield = Upgrade.mSH;
+        sD.LevelOneHS = Level1.HighScore;
+        
+        string dataJson = JsonUtility.ToJson(sD);
         string saveState = Path.Combine(Application.persistentDataPath, saveName);
 
         File.WriteAllText(saveState, dataJson);

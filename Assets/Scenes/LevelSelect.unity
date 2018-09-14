@@ -717,6 +717,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22ec603fdc663a34f87b6bdde7eb56d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  block: {fileID: 0}
+  noStar: {fileID: 0}
+  oneStar: {fileID: 0}
+  twoStar: {fileID: 0}
+  threeStar: {fileID: 0}
 --- !u!4 &1042793873
 Transform:
   m_ObjectHideFlags: 0
