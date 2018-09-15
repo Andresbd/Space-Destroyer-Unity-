@@ -476,11 +476,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22ec603fdc663a34f87b6bdde7eb56d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  block: {fileID: 0}
-  noStar: {fileID: 0}
-  oneStar: {fileID: 0}
-  twoStar: {fileID: 0}
-  threeStar: {fileID: 0}
+  block: {fileID: 21300000, guid: 32a7a6d37911a044aa03bc5975d397a1, type: 3}
+  noStar: {fileID: 21300000, guid: 40a727882272b1740a40c30c1275957f, type: 3}
+  oneStar: {fileID: 21300000, guid: 8a10ff5bc3c94c34cb9580118250d3b4, type: 3}
+  twoStar: {fileID: 21300000, guid: a839e8b68531ee240b0655d355c28927, type: 3}
+  threeStar: {fileID: 21300000, guid: e91fda72ce55e674a883fddaf3a87df6, type: 3}
 --- !u!1 &643496294
 GameObject:
   m_ObjectHideFlags: 0

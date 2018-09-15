@@ -4,7 +4,7 @@ public class enemy : MonoBehaviour {
 	
 	private int scoreValue = 5;
 	private int goldValue = 1;
-	private int Health = 5;
+	private int Health = 10;
 	private int ht;
 	
 	private void Start()
@@ -14,11 +14,10 @@ public class enemy : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		//all projectile colliding game objects should be tagged "Enemy" or whatever in inspector but that tag must be reflected in the below if conditional
+		//If the enemy detects the trigger event of an objet with tag Bullet apply damage
 		if(col.tag == "Bullet")
 		{
 			Damage ();
-			UIManager.moreScore(scoreValue * gameManager.scoreMultiply);
 		}
 
 		if(col.tag == "Player")
@@ -35,6 +34,7 @@ public class enemy : MonoBehaviour {
 
 			gameManager.addKill();
 			player.gold = player.gold + goldValue;
+			UIManager.moreScore(scoreValue * gameManager.scoreMultiply);
 			Destroy (gameObject);
 		}
 	}

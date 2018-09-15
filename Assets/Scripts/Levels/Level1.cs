@@ -7,23 +7,27 @@ public class Level1 : MonoBehaviour {
     public static float HighScore;
     public static int eneCount;
     public bool finish;
+    private float tmp;
     
     private int _enemyPick;
 
     public GameObject en1, en2, en3;
     
-    int NextEnemySpawnTime = 0;
-    int EnemySpawnRate = 5;
+    private int NextEnemySpawnTime = 0;
+    private int EnemySpawnRate = 5;
 
     private void Start()
     {
         gameManager.setMultiply(Levels.One);
         Picker();
         NextEnemySpawnTime = (int)Time.time + EnemySpawnRate;
+        
     }
 
     void Update()
     {
+        tmp = UIManager.scoreNumber;
+        gameManager.scTemp = tmp;
         
         if((int)Time.time == NextEnemySpawnTime){
  
@@ -31,18 +35,15 @@ public class Level1 : MonoBehaviour {
             NextEnemySpawnTime = (int)Time.time + EnemySpawnRate;
         }
 
-        if (eneCount >= 3)
+        if (eneCount >= 20)
         {
             FinishLevel();
         }
     }
 
     private void FinishLevel()
-    {    
-        float tmp;
-        tmp = UIManager.scoreNumber;
-        gameManager.scTemp = UIManager.scoreNumber;
-
+    {
+        Level2.blocked = false;
         if (HighScore == 0)
         {
             HighScore = tmp;

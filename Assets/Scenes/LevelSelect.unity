@@ -374,7 +374,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 40a727882272b1740a40c30c1275957f, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -484,7 +484,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e19a1438ca650f041aff35f76f644188, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -675,7 +675,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e19a1438ca650f041aff35f76f644188, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -698,7 +698,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1042793873}
   - component: {fileID: 1042793872}
-  - component: {fileID: 1042793874}
   m_Layer: 0
   m_Name: MenuController
   m_TagString: Untagged
@@ -717,11 +716,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22ec603fdc663a34f87b6bdde7eb56d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  block: {fileID: 0}
-  noStar: {fileID: 0}
-  oneStar: {fileID: 0}
-  twoStar: {fileID: 0}
-  threeStar: {fileID: 0}
+  block: {fileID: 21300000, guid: 32a7a6d37911a044aa03bc5975d397a1, type: 3}
+  noStar: {fileID: 21300000, guid: 40a727882272b1740a40c30c1275957f, type: 3}
+  oneStar: {fileID: 21300000, guid: 8a10ff5bc3c94c34cb9580118250d3b4, type: 3}
+  twoStar: {fileID: 21300000, guid: a839e8b68531ee240b0655d355c28927, type: 3}
+  threeStar: {fileID: 21300000, guid: e91fda72ce55e674a883fddaf3a87df6, type: 3}
 --- !u!4 &1042793873
 Transform:
   m_ObjectHideFlags: 0
@@ -735,18 +734,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1042793874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1042793871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a72f871e3927484f91179fd2732cc27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goldText: {fileID: 1603648270}
 --- !u!1 &1144267752
 GameObject:
   m_ObjectHideFlags: 0

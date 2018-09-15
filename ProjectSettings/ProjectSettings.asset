@@ -13,7 +13,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: anbudi
   productName: SpaceTactics
-  defaultCursor: {fileID: 2800000, guid: c4b87a988fcf19148b95b23dd59ff596, type: 3}
+  defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.2794118, g: 1, b: 0.8509128, a: 1}
   m_ShowUnitySplashScreen: 1

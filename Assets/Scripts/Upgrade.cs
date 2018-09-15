@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class Upgrade
 {
-    public static int mSH = 0, mEN = 0, mAT = 0;
+    public static int mSH, mEN, mAT;
     public static int cSH = 10, cEN = 10, cAT = 10;
 
     public static void moreSH()

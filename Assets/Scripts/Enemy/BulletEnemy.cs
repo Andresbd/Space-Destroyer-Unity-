@@ -16,12 +16,21 @@ public class BulletEnemy : MonoBehaviour {
 
 		transform.position = bulletPos;
 
-		Vector3 max = new Vector3 (10f, 4.4f, 1);
+		Vector3 max = new Vector3 (-10f, 4.4f, 1);
 
-		if (transform.position.x > max.x) {
+		if (transform.position.x < max.x) {
 
 			Destroy (gameObject);
 		}
 		
+	}
+	
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		//all projectile colliding game objects should be tagged "Enemy" or whatever in inspector but that tag must be reflected in the below if conditional
+		if(col.tag == "Player" || col.tag == "Meteor" || col.tag == "Bullet")
+		{
+			Destroy(gameObject);
+		}
 	}
 }

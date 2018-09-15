@@ -5,12 +5,48 @@ using UnityEngine;
 public class MenuUpgrade : MonoBehaviour
 {
 
-    public GameObject aOne, aTwo, aThree, aFour, aFive, aSix;
+    public GameObject aOne, aTwo, aThree, aFour, aFive, aSix, sOne, sTwo, sThree, sFour, sFive, sSix;
     
     void Update()
     {
         int a = Upgrade.mAT;
-        
+        int s = Upgrade.mSH;
+
+        ShowUpgrade(a, s);
+    }
+
+    public void upShiedld()
+    {
+        int g = player.gold;
+        if (g >= Upgrade.cSH && Upgrade.mSH <= 6)
+        {
+            player.gold -= Upgrade.cSH;
+            Upgrade.moreSH();
+        }
+    }
+
+    public void upAttack()
+    {
+        int g = player.gold;
+        if (g >= Upgrade.cAT && Upgrade.mAT <= 6)
+        {
+            player.gold -= Upgrade.cAT;
+            Upgrade.moreAT();
+        }
+    }
+
+    public void upEnergy()
+    {
+        int g = player.gold;
+        if (g >= Upgrade.cEN && Upgrade.mEN <= 6)
+        {
+            player.gold -= Upgrade.cEN;
+            Upgrade.moreEN();
+        }
+    }
+
+    void ShowUpgrade(int a, int s)
+    {
         switch (a)
         {
             case 6:
@@ -75,35 +111,70 @@ public class MenuUpgrade : MonoBehaviour
                 aOne.SetActive(false);    
                 break;
         }
-    }
-
-    public void upShiedld()
-    {
-        int g = player.gold;
-        if (g >= Upgrade.cSH && Upgrade.mSH <= 6)
+        
+        switch (s)
         {
-            player.gold -= Upgrade.cSH;
-            Upgrade.moreSH();
-        }
-    }
-
-    public void upAttack()
-    {
-        int g = player.gold;
-        if (g >= Upgrade.cAT && Upgrade.mAT <= 6)
-        {
-            player.gold -= Upgrade.cAT;
-            Upgrade.moreAT();
-        }
-    }
-
-    public void upEnergy()
-    {
-        int g = player.gold;
-        if (g >= Upgrade.cEN && Upgrade.mEN <= 6)
-        {
-            player.gold -= Upgrade.cEN;
-            Upgrade.moreEN();
+            case 6:
+                sSix.SetActive(true);
+                sFive.SetActive(true);
+                sFour.SetActive(true);
+                sThree.SetActive(true);
+                sTwo.SetActive(true);
+                sOne.SetActive(true);
+                break;
+                
+            case 5:
+                sSix.SetActive(false);
+                sFive.SetActive(true);
+                sFour.SetActive(true);
+                sThree.SetActive(true);
+                sTwo.SetActive(true);
+                sOne.SetActive(true);   
+                break;
+			
+            case 4:
+                sSix.SetActive(false);
+                sFive.SetActive(false);
+                sFour.SetActive(true);
+                sThree.SetActive(true);
+                sTwo.SetActive(true);
+                sOne.SetActive(true);    
+                break;
+			
+            case 3:
+                sSix.SetActive(false);
+                sFive.SetActive(false);
+                sFour.SetActive(false);
+                sThree.SetActive(true);
+                sTwo.SetActive(true);
+                sOne.SetActive(true);   
+                break;
+			
+            case 2:
+                sSix.SetActive(false);
+                sFive.SetActive(false);
+                sFour.SetActive(false);
+                sThree.SetActive(false);
+                sTwo.SetActive(true);
+                sOne.SetActive(true);    
+                break;
+			
+            case 1:
+                sSix.SetActive(false);
+                sFive.SetActive(false);
+                sFour.SetActive(false);
+                sThree.SetActive(false);
+                sTwo.SetActive(false);
+                sOne.SetActive(true);    
+                break;
+            case 0:
+                sSix.SetActive(false);
+                sFive.SetActive(false);
+                sFour.SetActive(false);
+                sThree.SetActive(false);
+                sTwo.SetActive(false);
+                sOne.SetActive(false);    
+                break;
         }
     }
 }

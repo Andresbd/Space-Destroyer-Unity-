@@ -3,10 +3,21 @@
 public class player : MonoBehaviour
 {
 
-	public static int charHealth = 6;
-    public static float charShield = 0 + Upgrade.mSH;
+	public static int charHealth;
+    public static int charShield;
 	public static int gold;
 	public static int experience;
+
+	private void Start()
+	{
+		charShield = Upgrade.mSH;
+	}
+
+	private void Update()
+	{
+		ShowShield(charShield);
+		showLife(charHealth);
+	}
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
@@ -22,7 +33,6 @@ public class player : MonoBehaviour
         if (charShield <= 0) {
 
             charHealth = charHealth - 1;
-	        showLife(charHealth);
 
             if (charHealth <= 0)
             {
@@ -35,7 +45,75 @@ public class player : MonoBehaviour
 			charShield -= 1;
 		}
 	}
-	
+
+	void ShowShield(int sh)
+	{
+		switch (sh)
+		{
+			case 6:
+				UIManager.sSix.SetActive(true);
+				UIManager.sFive.SetActive(true);
+				UIManager.sFour.SetActive(true);
+				UIManager.sThree.SetActive(true);
+				UIManager.sTwo.SetActive(true);
+				UIManager.sOne.SetActive(true);
+				break;
+                
+			case 5:
+				UIManager.sSix.SetActive(false);
+				UIManager.sFive.SetActive(true);
+				UIManager.sFour.SetActive(true);
+				UIManager.sThree.SetActive(true);
+				UIManager.sTwo.SetActive(true);
+				UIManager.sOne.SetActive(true);    
+				break;
+			
+			case 4:
+				UIManager.sSix.SetActive(false);
+				UIManager.sFive.SetActive(false);
+				UIManager.sFour.SetActive(true);
+				UIManager.sThree.SetActive(true);
+				UIManager.sTwo.SetActive(true);
+				UIManager.sOne.SetActive(true);    
+				break;
+			
+			case 3:
+				UIManager.sSix.SetActive(false);
+				UIManager.sFive.SetActive(false);
+				UIManager.sFour.SetActive(false);
+				UIManager.sThree.SetActive(true);
+				UIManager.sTwo.SetActive(true);
+				UIManager.sOne.SetActive(true);    
+				break;
+			
+			case 2:
+				UIManager.sSix.SetActive(false);
+				UIManager.sFive.SetActive(false);
+				UIManager.sFour.SetActive(false);
+				UIManager.sThree.SetActive(false);
+				UIManager.sTwo.SetActive(true);
+				UIManager.sOne.SetActive(true);    
+				break;
+			
+			case 1:
+				UIManager.sSix.SetActive(false);
+				UIManager.sFive.SetActive(false);
+				UIManager.sFour.SetActive(false);
+				UIManager.sThree.SetActive(false);
+				UIManager.sTwo.SetActive(false);
+				UIManager.sOne.SetActive(true);    
+				break;
+			case 0:
+				UIManager.sSix.SetActive(false);
+				UIManager.sFive.SetActive(false);
+				UIManager.sFour.SetActive(false);
+				UIManager.sThree.SetActive(false);
+				UIManager.sTwo.SetActive(false);
+				UIManager.sOne.SetActive(false);    
+				break;
+		}
+	}
+
 	public void showLife(int hp)
 	{
 		switch (hp)

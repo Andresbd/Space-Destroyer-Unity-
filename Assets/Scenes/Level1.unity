@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.013105957, g: 0.051946655, b: 0.07377099, a: 1}
+  m_IndirectSpecularColor: {r: 0.026860217, g: 0.08895125, b: 0.120960675, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -233,11 +233,6 @@ Prefab:
     m_Modifications:
     - target: {fileID: 224634491980899618, guid: 4805ff739e9381947995efd9ffbdf10b,
         type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 224634491980899618, guid: 4805ff739e9381947995efd9ffbdf10b,
-        type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -331,11 +326,6 @@ Prefab:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1093339207}
-    - target: {fileID: 114941931285429998, guid: 4805ff739e9381947995efd9ffbdf10b,
-        type: 2}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Shoot
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4805ff739e9381947995efd9ffbdf10b, type: 2}
   m_IsPrefabParent: 0
