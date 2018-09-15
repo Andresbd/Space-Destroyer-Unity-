@@ -8,6 +8,7 @@ enum Levels {One, Two, Three};
 public class gameManager : MonoBehaviour {
 
     public static int scoreMultiply;
+    public static float scTemp;
     private saveData saveData;
     public static GameObject inGame;
     private string saveName = "save.json";
@@ -59,8 +60,7 @@ public class gameManager : MonoBehaviour {
     public void EndGame()
     {
         SaveProgress();
-        
-        SceneManager.LoadScene("LevelSelect");
+        SceneManager.LoadScene("ScoreScreen");
         
         player.charHealth = 6;
         player.charShield = 0 + Upgrade.mSH;

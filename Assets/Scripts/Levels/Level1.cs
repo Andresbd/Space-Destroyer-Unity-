@@ -31,7 +31,7 @@ public class Level1 : MonoBehaviour {
             NextEnemySpawnTime = (int)Time.time + EnemySpawnRate;
         }
 
-        if (eneCount >= 15)
+        if (eneCount >= 3)
         {
             FinishLevel();
         }
@@ -41,6 +41,7 @@ public class Level1 : MonoBehaviour {
     {    
         float tmp;
         tmp = UIManager.scoreNumber;
+        gameManager.scTemp = UIManager.scoreNumber;
 
         if (HighScore == 0)
         {

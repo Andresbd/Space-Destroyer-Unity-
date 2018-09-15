@@ -34,6 +34,7 @@
           <e p="shooting.cs" t="Include" />
         </e>
         <e p="saveData.cs" t="Include" />
+        <e p="ScoreScreen.cs" t="Include" />
         <e p="skyboxManager.cs" t="Include" />
         <e p="UIManager.cs" t="Include" />
         <e p="Upgrade.cs" t="Include" />
