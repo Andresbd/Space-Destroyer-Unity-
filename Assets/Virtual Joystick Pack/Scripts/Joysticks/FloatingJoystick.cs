@@ -5,11 +5,6 @@ public class FloatingJoystick : Joystick
 {
     Vector2 joystickCenter = Vector2.zero;
 
-    void Start()
-    {
-        background.gameObject.SetActive(false);
-    }
-
     public override void OnDrag(PointerEventData eventData)
     {
         Vector2 direction = eventData.position - joystickCenter;
@@ -19,7 +14,7 @@ public class FloatingJoystick : Joystick
 
     public override void OnPointerDown(PointerEventData eventData)
     {
-        background.gameObject.SetActive(true);
+        background.gameObject.SetActive(false);
         background.position = eventData.position;
         handle.anchoredPosition = Vector2.zero;
         joystickCenter = eventData.position;
@@ -27,7 +22,7 @@ public class FloatingJoystick : Joystick
 
     public override void OnPointerUp(PointerEventData eventData)
     {
-        background.gameObject.SetActive(false);
+        background.gameObject.SetActive(true);
         inputVector = Vector2.zero;
     }
 }

@@ -9,14 +9,17 @@
         <e p="bullet.cs" t="Include" />
         <e p="changeScenes.cs" t="Include" />
         <e p="Enemy" t="Include">
+          <e p="BulletEnemy.cs" t="Include" />
           <e p="enemy.cs" t="Include" />
           <e p="enemyMovement.cs" t="Include" />
+          <e p="EnemyShoot.cs" t="Include" />
           <e p="enemySpawn.cs" t="Include" />
         </e>
         <e p="gameManager.cs" t="Include" />
-        <e p="GoldDisplay.cs" t="Include" />
         <e p="Levels" t="Include">
           <e p="Level1.cs" t="Include" />
+          <e p="Level2.cs" t="Include" />
+          <e p="Level3.cs" t="Include" />
         </e>
         <e p="MenuOptions.cs" t="Include" />
         <e p="MenuUpgrade.cs" t="Include" />
@@ -29,6 +32,7 @@
           <e p="shooting.cs" t="Include" />
         </e>
         <e p="saveData.cs" t="Include" />
+        <e p="ScoreScreen.cs" t="Include" />
         <e p="skyboxManager.cs" t="Include" />
         <e p="UIManager.cs" t="Include" />
         <e p="Upgrade.cs" t="Include" />

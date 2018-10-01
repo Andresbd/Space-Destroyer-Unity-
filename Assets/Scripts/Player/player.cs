@@ -3,7 +3,7 @@
 public class player : MonoBehaviour
 {
 
-	public static int charHealth;
+	public static int charHealth = 6;
     public static int charShield;
 	public static int gold;
 	public static int experience;
